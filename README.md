@@ -1,1 +1,1 @@
-# PyTorch-CNN-Image-Classifier
+# Personalized CNN Image Classifier model for PyTorch Framework
