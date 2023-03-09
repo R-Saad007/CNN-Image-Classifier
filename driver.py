@@ -19,4 +19,4 @@ if __name__ == "__main__":
     end.record()
     # Waits for everything to finish running
     torch.cuda.synchronize()
-    print("%.3f" % (start.elapsed_time(end)/1000), "seconds")  # seconds
+    print("Execution Time:,"%.3f" % (start.elapsed_time(end)/1000), "seconds")  # seconds
