@@ -4,7 +4,7 @@ from cnn import *
 
 # Train function
 def train():
-    for epoch in range(2):  # loop over the dataset multiple times
+    for epoch in range(5):  # loop over the dataset multiple times
 
         running_loss = 0.0
         for i, data in enumerate(train_dataloader, 0):
