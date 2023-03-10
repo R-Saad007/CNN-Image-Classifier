@@ -31,4 +31,6 @@ def train():
                 print('Epoch: %d | Mini-Batch: %5d | loss: %.3f' % (epoch + 1, i + 1, running_loss / 2000))
                 running_loss = 0.0
         print("-----------------------------------")
+        # Calling scheduler to adjust learning rate
+        scheduler.step()
     print('Finished Training')
