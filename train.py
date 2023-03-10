@@ -4,10 +4,10 @@ from cnn import *
 
 # Train function
 def train():
+    print("Mini-Batches of 2000 images will be used")
     for epoch in range(5):  # loop over the dataset multiple times
 
         running_loss = 0.0
-        print("Mini-Batches of 2000 images will be used")
         for i, data in enumerate(train_dataloader, 0):
             # get the inputs; data is a list of [inputs, labels]
             inputs, labels = data
