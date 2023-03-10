@@ -3,3 +3,4 @@ Accuracy tends to decrease with increase in batch_size (inverse)
 Adam optimizer performs well but takes alot of time (600 seconds on 5 epochs with a batch_size of 5)
 SGD optimizer is a compromise for the accuracy with speed (116 seconds on 5 epochs with a batch_size of 5)
 The model tends to perform with an accuracy of 60%+ with batch_size = 4 and epochs = 5 (best)
+Dropout layers reduce accuracy as they prevent overfitting
