@@ -1,4 +1,6 @@
 from libraries import *
+from torch.optim.lr_scheduler import StepLR
+
 # CNN class
 class Net(nn.Module):
 # add more layers to check results, filter size, neuron number,
@@ -10,9 +12,11 @@ class Net(nn.Module):
         self.dropout1 = nn.Dropout(0.25)
         self.dropout2 = nn.Dropout(0.25)
         self.dropout3 = nn.Dropout(0.25) 
-        self.fc1 = nn.Linear(16 * 5 * 5, 120)
-        self.fc2 = nn.Linear(120, 84)
-        self.fc3 = nn.Linear(84, 10)
+        self.dropout4 = nn.Dropout(0.25) 
+        self.fc1 = nn.Linear(16 * 5 * 5, 200)
+        self.fc2 = nn.Linear(200, 90)
+        self.fc3 = nn.Linear(90, 40)
+        self.fc4 = nn.Linear(40,10)
 
     def forward(self, x):
         x = self.pool(F.relu(self.conv1(x)))
@@ -23,7 +27,9 @@ class Net(nn.Module):
         x = self.dropout2(x)
         x = F.relu(self.fc2(x))
         x = self.dropout3(x)
-        x = self.fc3(x)
+        x = F.relu(self.fc3(x))
+        x = self.dropout4(x)
+        x = self.fc4(x)
         return x
 
 # prints the structure of the CNN    
@@ -34,3 +40,4 @@ CNN_net = CNN_net.to(device)
 # defining the loss and optimizer functions
 criterion = nn.CrossEntropyLoss()
 optimizer = opt.SGD(CNN_net.parameters(), lr=0.001, momentum=0.9)
+scheduler = StepLR(optimizer, step_size=2,gamma=0.1)
