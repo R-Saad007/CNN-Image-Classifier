@@ -12,3 +12,4 @@ if torch.cuda.is_available():                   # checking GPU compatibility
     device = "cuda:0"
 else:
     device = "cpu"
+device = torch.device(dev)
