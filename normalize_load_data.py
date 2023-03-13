@@ -10,7 +10,7 @@ transform = transforms.Compose([
 ])
 
 # setting batch size
-BATCH_SIZE = 4
+BATCH_SIZE = 5
 
 # setting number of workers
 NUM_OF_WORKERS = 2
