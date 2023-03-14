@@ -4,6 +4,6 @@ Adam optimizer performs well but takes alot of time (600 seconds on 5 epochs wit
 SGD optimizer is a compromise for the accuracy with speed (116 seconds on 5 epochs with a batch_size of 5)
 The model tends to perform with an accuracy of 60%+ with batch_size = 4 and epochs = 5 (best)
 Dropout layers reduce accuracy as they prevent overfitting
-Adding neurons to Fully connected layers increases accuracy as it tends to offer more features for mapping but takes longer to train
+Adding neurons to Fully connected layers increases accuracy as it tends to offer more features for mapping but the model takes longer to train
 Adding more layers results in smaller images (16x1x1) which means we have to remove a layer of pooling to ensure forward pass works properly
 Made use of StepLR scheduler which slightly increased the accuracy (1-2)%. No major impact though.
