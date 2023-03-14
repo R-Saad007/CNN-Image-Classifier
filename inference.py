@@ -1,5 +1,4 @@
 from libraries import *
-import os
 from normalize_load_data import *
 from cnn import Net
 
