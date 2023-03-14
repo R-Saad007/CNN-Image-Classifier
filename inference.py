@@ -50,22 +50,26 @@ def view_images():
         image_path = os.path.join(IMG_PATH, image)
         images.append(cv.imread(image_path))
            
-    for x in images:
-        plt.figure()
-        plt.imshow(x)
-    plt.show()
+    fig = plt.figure(figsize=(8, 8))
+    rows = 5
+    for x in range(len(images)):
+        fig.add_subplot(rows, 5, x+1)
+        plt.title(f'{x+1}')
+        plt.imshow(images[x])
+        plt.axis('off')
+    plt.savefig('inference_input')
     return
 
 if __name__ == '__main__':
     # For calculating execution time
-    # start = torch.cuda.Event(enable_timing=True)
-    # end = torch.cuda.Event(enable_timing=True)
-    # start.record()
+    start = torch.cuda.Event(enable_timing=True)
+    end = torch.cuda.Event(enable_timing=True)
+    start.record()
     print("Starting Image Inference")
     # whatever you are timing goes here
     inference()
     view_images()
-    # end.record()
+    end.record()
     # Waits for everything to finish running
-    # torch.cuda.synchronize()
-    # print("Execution Time:","%.3f" % (start.elapsed_time(end)/1000), "seconds")  # seconds
+    torch.cuda.synchronize()
+    print("Execution Time:","%.3f" % (start.elapsed_time(end)/1000), "seconds")  # seconds
