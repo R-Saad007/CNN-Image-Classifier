@@ -22,5 +22,4 @@ def graph(acc_list, loss_list, epochs):
     plt.ylabel("Loss")
     plt.title("Training Loss vs Epoch")
     plt.savefig("loss_graph.png")
-    # plt.show()
     return
