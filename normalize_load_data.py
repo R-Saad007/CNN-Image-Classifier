@@ -6,7 +6,7 @@ transform = transforms.Compose([
     # conversion to tensors
     transforms.ToTensor(),
     # normalizing tensors
-    transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5)) # ((mean of 0.5 for R,G,B) (sd of 0.5 for R,G,G))
+    transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5)) # ((mean of 0.5 for R,G,B) (sd of 0.5 for R,G,B))
 ])
 
 # setting batch size
