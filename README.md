@@ -4,4 +4,4 @@
 ```python driver.py```
 ### Run inference.py to run inference on the model for images added in the inference_images/inf_imgs/ directory.
 ``` python inference.py```
-#### The model is trained using CIFAR-10 dataset, hence can be used to classify 10 classes: ('airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
+### The model is trained using CIFAR-10 dataset, hence can be used to classify 10 classes: ('airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
