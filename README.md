@@ -14,4 +14,4 @@
 - frog
 - horse
 - ship
-+ truck
+- truck
