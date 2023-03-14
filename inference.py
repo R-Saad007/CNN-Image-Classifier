@@ -49,15 +49,7 @@ def view_images():
     for image in img_list:
         image_path = os.path.join(IMG_PATH, image)
         images.append(cv.imread(image_path))
-
-    # fig=plt.figure(figsize=(8, 8))
-    # rows, cols = 2, 3
-    # for i in range(0, len(images), rows*cols):
-    #     fig=plt.figure(figsize=(8, 8))
-    # for j in range(0, cols*rows):
-    #     fig.add_subplot(rows, cols, j+1)
-    #     plt.imshow(images[i+j])
-    # plt.show()
+           
     for x in images:
         plt.figure()
         plt.imshow(x)
