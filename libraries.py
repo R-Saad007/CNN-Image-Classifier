@@ -7,6 +7,7 @@ import torchvision.transforms as transforms     # to make transformations
 import torch.nn as nn                           # the CNN class
 import torch.nn.functional as F                 # convolution function (ReLU)
 import torch.optim as opt                       # optimizer function (SGD, Adam, Adagrad etc)
+import os                                       # for file handling
 
 if torch.cuda.is_available():                   # checking GPU compatibility
     device = "cuda:0"
