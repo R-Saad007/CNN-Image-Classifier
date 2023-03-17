@@ -1,5 +1,4 @@
 from libraries import *
-from normalize_load_data import train_dataloader, test_dataloader
 from train import train
 from test import test
 from graph import graph
