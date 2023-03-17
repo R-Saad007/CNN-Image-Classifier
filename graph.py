@@ -1,6 +1,4 @@
 from libraries import *
-from scipy.interpolate import make_interp_spline
-
 
 # function to print and save graphs
 def graph(acc_list, loss_list, epochs):
