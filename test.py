@@ -22,6 +22,7 @@ def test(save_flag):
     accuracy = (correct / total) * 100
     print('Finished Testing')
     print('Accuracy on the 10000 test images: %.2f %%' % accuracy)
+    print("-----------------------------------------")
     if save_flag:
         # to save the CNN model
         PATH = './cifar_net.pth'
