@@ -31,12 +31,11 @@ class Net(nn.Module):
         x = self.fc3(x)
         return x
 
-# prints the structure of the CNN
 CNN_net = Net()
 CNN_net = CNN_net.to(device)
-# print(CNN_net)
 
 # defining the loss and optimizer functions
 criterion = nn.CrossEntropyLoss()
 optimizer = opt.SGD(CNN_net.parameters(), lr=0.001, momentum=0.9)
+# scheduler for dynamically adjusting the learning rate
 scheduler = StepLR(optimizer, step_size=2,gamma=0.1)
