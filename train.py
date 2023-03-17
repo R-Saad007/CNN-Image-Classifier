@@ -1,5 +1,7 @@
 from libraries import *
 from normalize_load_data import train_dataloader
+# we can use the dataloader below for data augmentation
+# from normalize_load_data import data_augment_loader
 from cnn import *
 
 # Train function
