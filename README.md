@@ -7,7 +7,7 @@
 ### In our case:
 #### img_path = './inference_images/images/'
 #### model_path = './cifar_net.pth'
-### The model is pre-trained using ImageNet dataset, hence can be used to classify the following 10 classes:
+### The model is pre-trained using CIFAR10 dataset, hence can be used to classify the following 10 classes:
 - airplane
 - automobile
 - bird
