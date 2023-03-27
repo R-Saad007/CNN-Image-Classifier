@@ -11,14 +11,9 @@ class inference():
         self.pred_labels = []
         # list of actual labels
         self.ground_truth_labels = classes
-        # To load saved model
-        model = Net()
-        model.load_state_dict(torch.load(args.model_path))
-        # to set dropout and batch normalization layers to evaluation 
-        model.eval()
-        model = model.to(device)
-        self.model = model
         # transformation on images
+        # model used
+        self.model = self.model_init()
         data_transforms = transforms.Compose([
         # conversion to tensors
         transforms.ToTensor(),
@@ -29,6 +24,16 @@ class inference():
         ])
         self.data_transforms = data_transforms
     
+    # model
+    def model_init(self):
+        # To load saved model
+        model = Net()
+        model.load_state_dict(torch.load(args.model_path))
+        # to set dropout and batch normalization layers to evaluation 
+        model.eval()
+        model = model.to(device)
+        return model
+
     # inference
     def infer(self,obj):
         # inference dataset
