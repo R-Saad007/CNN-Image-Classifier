@@ -11,9 +11,9 @@ class inference():
         self.pred_labels = []
         # list of actual labels
         self.ground_truth_labels = classes
-        # transformation on images
         # model used
         self.model = self.model_init()
+        # transformation on images
         data_transforms = transforms.Compose([
         # conversion to tensors
         transforms.ToTensor(),
